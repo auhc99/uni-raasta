@@ -104,7 +104,7 @@ const residentialCollegesData = [
   },
   {
     name: 'Ridge View Residential College (RVRC)',
-    logo: 'https://rvrc.nus.edu.sg/wp-content/themes/nus-theme-v2-php8/images/nus-logo.png',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IZEb1vR5JXDZOrb57mBTfpaPJNirw_xG52_J-dxddA&s',
     link: 'https://rvrc.nus.edu.sg/',
   },
   {
@@ -235,7 +235,7 @@ const AccommodationsPage = () => {
       </TableContainer>
 
       {/* Application Guide Section */}
-      <Typography variant="h5" gutterBottom sx={{ mt: 4 }}>
+      <Typography variant="h5" gutterBottom my={2}>
         Apply for a Hostel in 6 Steps
       </Typography>
       <Stepper orientation="vertical">
