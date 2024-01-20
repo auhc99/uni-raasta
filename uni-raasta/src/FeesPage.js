@@ -99,7 +99,7 @@ const tableBodyStyle = {
 const FeesPage = () => {
   return (
     <Box my={2}>
-      <Typography variant="h4" color="primary" gutterBottom>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Tuition Fees
       </Typography>
 
@@ -180,7 +180,7 @@ const FeesPage = () => {
       </TableContainer>
 
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Miscellaneous Student Fees
       </Typography>
 
@@ -266,7 +266,7 @@ const FeesPage = () => {
         </Table>
       </TableContainer>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Tuition Fee beyond Normal candidature
       </Typography>
 
@@ -335,7 +335,7 @@ const FeesPage = () => {
         non-subsidised semestral fees pro-rated based on the number of units read.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Fee Payment Procedures
       </Typography>
 
@@ -353,7 +353,7 @@ const FeesPage = () => {
         Student Bill online at least 2 weeks before the scheduled deadline for fee payment.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Late and Partial Payment Penalties
       </Typography>
 
@@ -373,7 +373,7 @@ const FeesPage = () => {
         students with overdue fees may have their candidature of study terminated.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Refund Policy
       </Typography>
 
