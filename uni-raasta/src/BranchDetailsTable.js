@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow, Paper } from '@mui/material';
 
-function BranchDetailsTable() {
+const BranchDetailsTable = () => {
   const [branchData, setBranchData] = useState([]);
 
   useEffect(() => {
@@ -33,6 +33,6 @@ function BranchDetailsTable() {
       </Table>
     </Paper>
   );
-}
+};
 
 export default BranchDetailsTable;

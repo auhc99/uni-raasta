@@ -28,7 +28,7 @@ const FeesPage = () => {
         Tuition Fees
       </Typography>
       <Typography variant="h5" gutterBottom>
-      Per Annum Amounts
+        Per Annum Amounts
       </Typography>
       <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
@@ -45,21 +45,41 @@ const FeesPage = () => {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell align="center" sx={{ border: 1 }}>Year</TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>Singapore Citizens (SGD)</TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>Singapore Permanent Residents (SGD)</TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>International Students (SGD)</TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>No Tuition Grant (SGD)</TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>
+                Year
+              </TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>
+                Singapore Citizens (SGD)
+              </TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>
+                Singapore Permanent Residents (SGD)
+              </TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>
+                International Students (SGD)
+              </TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>
+                No Tuition Grant (SGD)
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row, index) => (
               <TableRow key={index} sx={{ border: 1 }}>
-                <TableCell align="center" sx={{ border: 1 }}>{row.matriculationYear}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row.tierA.toLocaleString()}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row.tierB.toLocaleString()}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row.tierC.toLocaleString()}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row.noTuitionGrant.toLocaleString()}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row.matriculationYear}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row.tierA.toLocaleString()}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row.tierB.toLocaleString()}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row.tierC.toLocaleString()}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row.noTuitionGrant.toLocaleString()}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

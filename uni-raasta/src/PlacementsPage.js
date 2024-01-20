@@ -52,7 +52,7 @@ const branchData = [
   { name: 'Business Analytics', rate: '96.2%', salary: '$5500' },
 ];
 
-function PlacementsPage() {
+const PlacementsPage = () => {
   return (
     <Box my={2}>
       <Typography variant="h4" color="primary" gutterBottom>
@@ -93,23 +93,31 @@ function PlacementsPage() {
           <TableHead>
             <TableRow>
               <TableCell sx={{ border: 1 }}>Branch</TableCell>
-              <TableCell align="right" sx={{ border: 1 }}>Employment Rate</TableCell>
-              <TableCell align="right" sx={{ border: 1 }}>Median Salary</TableCell>
+              <TableCell align="right" sx={{ border: 1 }}>
+                Employment Rate
+              </TableCell>
+              <TableCell align="right" sx={{ border: 1 }}>
+                Median Salary
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {branchData.map((branch, index) => (
               <TableRow key={index} sx={{ border: 1 }}>
                 <TableCell sx={{ border: 1 }}>{branch.name}</TableCell>
-                <TableCell align="right" sx={{ border: 1 }}>{branch.rate}</TableCell>
-                <TableCell align="right" sx={{ border: 1 }}>{branch.salary}</TableCell>
+                <TableCell align="right" sx={{ border: 1 }}>
+                  {branch.rate}
+                </TableCell>
+                <TableCell align="right" sx={{ border: 1 }}>
+                  {branch.salary}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
-        </TableContainer>
+      </TableContainer>
     </Box>
   );
-}
+};
 
 export default PlacementsPage;

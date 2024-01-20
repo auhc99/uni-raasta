@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 
-function ResourceCard({ title, description }) {
+const ResourceCard = ({ title, description }) => {
   return (
     <Card>
       <CardContent>
@@ -10,6 +10,6 @@ function ResourceCard({ title, description }) {
       </CardContent>
     </Card>
   );
-}
+};
 
 export default ResourceCard;

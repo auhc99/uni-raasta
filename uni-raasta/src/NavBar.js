@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-function NavBar() {
+const NavBar = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -16,7 +16,7 @@ function NavBar() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div">
           National University of Singapore
         </Typography>
         <Tabs value={value} onChange={handleChange} textColor="inherit">
@@ -31,6 +31,6 @@ function NavBar() {
       </Toolbar>
     </AppBar>
   );
-}
+};
 
 export default NavBar;
