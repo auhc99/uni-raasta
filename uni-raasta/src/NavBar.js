@@ -1,13 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Tabs,
-  Tab,
-  Box,
-} from '@mui/material';
+import { AppBar, Toolbar, Typography, Tabs, Tab } from '@mui/material';
 
 const NavBar = () => {
   const [value, setValue] = React.useState(0);
