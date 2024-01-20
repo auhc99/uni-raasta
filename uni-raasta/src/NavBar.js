@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -20,7 +21,7 @@ function NavBar() {
         </Typography>
         <Tabs value={value} onChange={handleChange} textColor="inherit">
           <Tab label="Home" />
-          <Tab label="Admissions" />
+          <Tab label="Admissions" component={Link} to="/admissions" />
           <Tab label="Fees" />
           <Tab label="Societies and Clubs" />
           <Tab label="Placements" />
