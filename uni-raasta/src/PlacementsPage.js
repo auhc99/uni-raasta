@@ -1,0 +1,116 @@
+import React from 'react';
+import {
+  Typography,
+  Grid,
+  Box,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Card,
+  CardContent,
+} from '@mui/material';
+
+const resourceData = [
+  {
+    title: 'Recruitment Events',
+    description:
+      'Direct interactions with potential employers for internships or full-time positions.',
+  },
+  {
+    title: 'Career Fairs',
+    description:
+      'Opportunities to meet numerous employers and learn about job openings and internships.',
+  },
+  {
+    title: 'AI-Powered Platform',
+    description:
+      'Advanced technology to match students with suitable job opportunities and career paths.',
+  },
+  {
+    title: 'Alumni Mentoring',
+    description:
+      'Mentorship and advice from experienced alumni to guide career choices and networking.',
+  },
+  {
+    title: 'Career Counselling',
+    description: 'Personalized guidance and support for career planning and decision-making.',
+  },
+  {
+    title: 'Networking Events',
+    description: 'Connect with alumni, industry professionals, and potential employers.',
+  },
+];
+
+const branchData = [
+  { name: 'Computer Science', rate: '96.8%', salary: '$6500' },
+  { name: 'Information Systems', rate: '95.3%', salary: '$5300' },
+  { name: 'Information Security', rate: '94.6%', salary: '$5400' },
+  { name: 'Business Analytics', rate: '96.2%', salary: '$5500' },
+];
+
+const PlacementsPage = () => {
+  return (
+    <Box my={4} mx={2}>
+      <Typography variant="h4" color="primary" gutterBottom>
+        NUS Computer Science Placements
+      </Typography>
+
+      <Grid container spacing={4} justifyContent="center">
+        {resourceData.map((resource, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card raised sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {resource.title}
+                </Typography>
+                <Typography variant="body1" color="text.secondary">
+                  {resource.description}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+
+      <Box mt={5}>
+        <Typography variant="h5" gutterBottom align="center">
+          Branch Details (As of 2022)
+        </Typography>
+        <TableContainer component={Paper} elevation={3} sx={{ border: 1 }}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell sx={{ border: 1 }}>Branch</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  Employment Rate
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  Median Salary
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {branchData.map((branch, index) => (
+                <TableRow key={index} sx={{ border: 1 }}>
+                  <TableCell sx={{ border: 1 }}>{branch.name}</TableCell>
+                  <TableCell align="center" sx={{ border: 1 }}>
+                    {branch.rate}
+                  </TableCell>
+                  <TableCell align="center" sx={{ border: 1 }}>
+                    {branch.salary}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Box>
+    </Box>
+  );
+};
+
+export default PlacementsPage;
