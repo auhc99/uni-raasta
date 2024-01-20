@@ -278,7 +278,7 @@ const FeesPage = () => {
       </TableContainer>
 
       <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
-        Tuition Fee beyond Normal candidature
+        Tuition Fee beyond Normal Candidature
       </Typography>
 
       <Typography variant="body1" paragraph style={bubbleStyle}>
