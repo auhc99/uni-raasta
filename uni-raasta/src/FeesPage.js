@@ -70,7 +70,7 @@ const tuitionFeeRows = [
 
 const bubbleStyle = {
   position: 'center',
-  backgroundColor: 'rgba(150, 150, 150, 0.1)', // Blue color with transparency
+  backgroundColor: 'rgba(100, 150, 200, 0.1)', // Blue color with transparency
   borderRadius: '10px', // Rounded corners
   padding: '15px', // Padding inside the bubble
   maxWidth: '1500px', // Maximum width of the bubble
