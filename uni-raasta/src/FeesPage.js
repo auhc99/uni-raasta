@@ -69,7 +69,7 @@ const tuitionFeeRows = [
 
 
 const bubbleStyle = {
-  position: 'relative',
+  position: 'center',
   backgroundColor: 'rgba(150, 150, 150, 0.1)', // Blue color with transparency
   borderRadius: '10px', // Rounded corners
   padding: '15px', // Padding inside the bubble
@@ -130,27 +130,27 @@ const FeesPage = () => {
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={1} rowSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} rowSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 Matriculation Year
               </TableCell>
-              <TableCell align="center" colSpan={3} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={3} sx={{ border: 1, fontSize: 18 }}>
                 Fees payable by students in receipt of MOE Tuition Grant
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Fees payable by students NOT in receipt of MOE Tuition Grant (Inclusive of GST)
               </TableCell>
             </TableRow>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 Singapore Citizens (SGD)
               </TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 Singapore Permanent Residents (SGD)
               </TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 International Students (SGD)
               </TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 No Tuition Grant (SGD)
               </TableCell>
             </TableRow>
@@ -198,51 +198,51 @@ const FeesPage = () => {
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={1} rowSpan={3} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} rowSpan={3} sx={{ border: 1, fontSize: 18 }}>
                 Matriculation Year
               </TableCell>
-              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 Student Services Fee (SSF) (Lab-based)
               </TableCell>
-              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 Student Services Fee (SSF) (Non lab-based)
               </TableCell>
-              <TableCell align="center" colSpan={4} rowSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={4} rowSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Health Service Fee (HSF)
               </TableCell>
             </TableRow>
 
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 Local Students
               </TableCell>
-              <TableCell align="center" colSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 International Students
               </TableCell>
             </TableRow>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Part-time
               </TableCell>
             </TableRow>
@@ -303,9 +303,9 @@ const FeesPage = () => {
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" sx={{ border: 1 }}>Student Type</TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>Semester</TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>Student Type</TableCell>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>Semester</TableCell>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 Revised Fee Pro-rated Based on Student's Semester Workload
               </TableCell>
             </TableRow>
