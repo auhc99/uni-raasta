@@ -17,7 +17,7 @@ function NavBar() {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          My School
+          National University of Singapore
         </Typography>
         <Tabs value={value} onChange={handleChange} textColor="inherit">
           <Tab label="Home" />
