@@ -1,6 +1,9 @@
 import React from 'react';
 import {
   Container,
+  Stepper,
+  Step,
+  StepLabel,
   Typography,
   Table,
   TableBody,
@@ -41,6 +44,14 @@ const AdmissionsPage = () => {
     },
   ];
 
+  const applicationSteps = [
+    'Check the Admission Requirements and Programme Pre-requisites',
+    'Apply online via the application form (refer to Application Guide and Sample Forms)',
+    'Submit supporting documents electronically (refer to Supporting Documents Guide)',
+    'Pay application fee',
+    'Track application via the Applicant Portal',
+  ];
+
   const visaInfo = {
     processSteps: [
       'Submit an application for a Student’s Pass to the Immigration & Checkpoints Authority (ICA) through the Student’s Pass Online Application & Registration (SOLAR) system.',
@@ -63,19 +74,19 @@ const AdmissionsPage = () => {
       <Typography variant="h5" gutterBottom>
         Admission Deadlines for Academic Year 2024/2025
       </Typography>
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Applicant Group</TableCell>
-              <TableCell>Application Period</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', border: 1 }}>Applicant Group</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', border: 1 }}>Application Period</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {deadlines.map((deadline, index) => (
-              <TableRow key={index}>
-                <TableCell>{deadline.group}</TableCell>
-                <TableCell>{deadline.period}</TableCell>
+              <TableRow key={index} sx={{ border: 1 }}>
+                <TableCell sx={{ border: 1 }}>{deadline.group}</TableCell>
+                <TableCell sx={{ border: 1 }}>{deadline.period}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -86,7 +97,13 @@ const AdmissionsPage = () => {
       <Typography variant="h5" gutterBottom>
         Application Process
       </Typography>
-      <ol>{/* Your application process steps */}</ol>
+      <Stepper orientation="vertical" sx={{ mb: 4 }}>
+        {applicationSteps.map((step, index) => (
+          <Step key={index} active={true} completed={false}>
+            <StepLabel>{step}</StepLabel>
+          </Step>
+        ))}
+      </Stepper>
       <Typography paragraph>
         For a detailed guide on the application process, please visit the&nbsp;
         <Link
@@ -120,24 +137,25 @@ const AdmissionsPage = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Programme</TableCell>
-              <TableCell>Duration</TableCell>
-              <TableCell>Standardised Tests Required</TableCell>
-              <TableCell>English Tests Required</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', border: 1 }}>Programme</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', border: 1 }}>Duration</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', border: 1 }}>
+                Standardised Tests Required
+              </TableCell>
+              <TableCell sx={{ fontWeight: 'bold', border: 1 }}>English Tests Required</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {/* Map through each course to display information */}
             {courses.map((course, index) => (
-              <TableRow key={index}>
-                <TableCell>
+              <TableRow key={index} sx={{ border: 1 }}>
+                <TableCell sx={{ border: 1 }}>
                   <Link href={course.link} target="_blank" rel="noopener noreferrer">
                     {course.name}
                   </Link>
                 </TableCell>
-                <TableCell>4 Years</TableCell>
-                <TableCell>SAT/ACT</TableCell>
-                <TableCell>IELTS/TOEFL</TableCell>
+                <TableCell sx={{ border: 1 }}>4 Years</TableCell>
+                <TableCell sx={{ border: 1 }}>SAT/ACT</TableCell>
+                <TableCell sx={{ border: 1 }}>IELTS/TOEFL</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -148,14 +166,26 @@ const AdmissionsPage = () => {
       <Typography variant="h5" gutterBottom sx={{ mt: 4 }}>
         Visa Application Process for International Students
       </Typography>
-      <ol>
+      <Stepper orientation="vertical">
         {visaInfo.processSteps.map((step, index) => (
-          <li key={index}>
-            <Typography paragraph>{step}</Typography>
-          </li>
+          <Step key={index} active={true} completed={false}>
+            <StepLabel>{step}</StepLabel>
+          </Step>
         ))}
-      </ol>
-      <Typography paragraph>{visaInfo.additionalNotes}</Typography>
+      </Stepper>
+      <Paper elevation={2} sx={{ p: 2, mt: 2 }}>
+        <Typography variant="body1">
+          {visaInfo.additionalNotes}
+          &nbsp;For more information on the visa application process, please visit the&nbsp;
+          <Link
+            href="https://www.mfa.gov.sg/Overseas-Mission/Brasilia/Important-Information/Visa-Application"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ministry of Foreign Affairs.
+          </Link>
+        </Typography>
+      </Paper>
 
       {/* Footer with Link to Official Admissions Page */}
       <Typography
