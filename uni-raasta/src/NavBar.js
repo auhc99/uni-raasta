@@ -23,7 +23,7 @@ const NavBar = () => {
           <Tab label="Home" />
           <Tab label="Admissions" component={Link} to="/admissions" />
           <Tab label="Fees" component={Link} to="/fees" />
-          <Tab label="Societies and Clubs" component={Link} to="/societies"/>
+          <Tab label="Societies and Clubs" component={Link} to="/societies" />
           <Tab label="Accommodations" component={Link} to="/accommodations" />
           <Tab label="Placements" component={Link} to="/placements" />
           <Tab label="Reviews" />
