@@ -24,6 +24,7 @@ function NavBar() {
           <Tab label="Admissions" component={Link} to="/admissions" />
           <Tab label="Fees" />
           <Tab label="Societies and Clubs" />
+          <Tab label="Accommodations" component={Link} to="/accommodations" />
           <Tab label="Placements" />
           <Tab label="Reviews" />
         </Tabs>
