@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SocietyClubPage = () => {
+const SocietiesPage = () => {
     return (
         <div>
             <header>
