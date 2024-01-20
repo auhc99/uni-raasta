@@ -9,6 +9,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/admissions" element={<AdmissionsPage />} />
+        <Route path="/societies" element= {<SocietiesPage/>}/>
         {/* ... other routes */}
       </Routes>
     </div>
