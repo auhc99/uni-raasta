@@ -167,55 +167,55 @@ const FeesPage = () => {
         fees. These are due at the same time as the tuition fees.
       </Typography>
 
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead>
-            <TableRow>
-              <TableCell align="center" colSpan={1} rowSpan={3}>
+            <TableRow sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} rowSpan={3} sx={{ border: 1 }}>
                 Matriculation Year
               </TableCell>
-              <TableCell align="center" colSpan={2} rowSpan={2}>
+              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1 }}>
                 Student Services Fee (SSF) (Lab-based)
               </TableCell>
-              <TableCell align="center" colSpan={2} rowSpan={2}>
+              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1 }}>
                 Student Services Fee (SSF) (Non lab-based)
               </TableCell>
-              <TableCell align="center" colSpan={4} rowSpan={1}>
+              <TableCell align="center" colSpan={4} rowSpan={1} sx={{ border: 1 }}>
                 Health Service Fee (HSF)
               </TableCell>
             </TableRow>
 
-            <TableRow>
-              <TableCell align="center" colSpan={2}>
+            <TableRow sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} sx={{ border: 1 }}>
                 Local Students
               </TableCell>
-              <TableCell align="center" colSpan={2}>
+              <TableCell align="center" colSpan={2} sx={{ border: 1 }}>
                 International Students
               </TableCell>
             </TableRow>
-            <TableRow>
-              <TableCell align="center" colSpan={1}>
+            <TableRow sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Part-time
               </TableCell>
             </TableRow>
@@ -223,16 +223,16 @@ const FeesPage = () => {
 
           <TableBody>
             {miscellaneousFeesRows.map(row => (
-              <TableRow>
-                <TableCell align="center">{row[0]}</TableCell>
-                <TableCell align="center">{row[1]}</TableCell>
-                <TableCell align="center">{row[2]}</TableCell>
-                <TableCell align="center">{row[3]}</TableCell>
-                <TableCell align="center">{row[4]}</TableCell>
-                <TableCell align="center">{row[5]}</TableCell>
-                <TableCell align="center">{row[6]}</TableCell>
-                <TableCell align="center">{row[7]}</TableCell>
-                <TableCell align="center">{row[8]}</TableCell>
+              <TableRow sx={{ border: 1 }}>
+                <TableCell align="center" sx={{ border: 1 }}>{row[0]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row[1]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row[2]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row[3]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row[4]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row[5]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row[6]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row[7]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row[8]}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -272,23 +272,23 @@ const FeesPage = () => {
         candidature will be capped at 120% and 150% of the subsidized semestral fees respectively.
       </Typography>
 
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead>
-            <TableRow>
-              <TableCell align="center">Student Type</TableCell>
-              <TableCell align="center">Semester</TableCell>
-              <TableCell align="center">
+            <TableRow sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1 }}>Student Type</TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>Semester</TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>
                 Revised Fee Pro-rated Based on Student's Semester Workload
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {tuitionFeeRows.map((row, index) => (
-              <TableRow key={index}>
-                <TableCell align="center">{row.studentType}</TableCell>
-                <TableCell align="center">{row.semester}</TableCell>
-                <TableCell align="center">{row.feeDescription}</TableCell>
+              <TableRow key={index} sx={{ border: 1 }}>
+                <TableCell align="center" sx={{ border: 1 }}>{row.studentType}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row.semester}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row.feeDescription}</TableCell>
               </TableRow>
             ))}
           </TableBody>
