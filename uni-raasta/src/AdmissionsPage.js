@@ -46,8 +46,8 @@ const AdmissionsPage = () => {
 
   const applicationSteps = [
     'Check the Admission Requirements and Programme Pre-requisites',
-    'Apply online via the application form (refer to Application Guide and Sample Forms)',
-    'Submit supporting documents electronically (refer to Supporting Documents Guide)',
+    'Apply online via the application form',
+    'Submit supporting documents electronically',
     'Pay application fee',
     'Track application via the Applicant Portal',
   ];
