@@ -280,7 +280,7 @@ const SocietiesPage = () => {
       <Typography variant="h3" gutterBottom my ={2} style={{ marginBottom: '50px' }}>
           Clubs
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={1}>
           {renderClickableItems(clubsData)}
         </Grid>
 
@@ -310,7 +310,7 @@ const SocietiesPage = () => {
 };
 
 const renderClickableItems = (data) => (
-    <Grid container spacing={2}>
+    <Grid container spacing={4}>
         {data.map((item) => (
             <Grid item key={item.id} xs={12} sm={6} md={3}>
         {/* Use a Material-UI Card for styling */}
@@ -339,7 +339,7 @@ const renderClickableItems = (data) => (
                 width: '360px',
                 backgroundImage: `url(${item.imageURL})`,
                 backgroundSize: 'contain',
-                backgroundPosition: 'center',
+                backgroundPosition: 'center center',
                 display: 'flex',
                 alignItems: 'center', // Center the content vertically
                 justifyContent: 'center', // Center the content horizontally
