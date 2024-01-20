@@ -130,7 +130,7 @@ const FeesPage = () => {
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} rowSpan={2} sx={{ border: 1 }}>
                 Matriculation Year
               </TableCell>
               <TableCell align="center" colSpan={3} sx={{ border: 1 }}>
@@ -141,9 +141,6 @@ const FeesPage = () => {
               </TableCell>
             </TableRow>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" sx={{ border: 1 }}>
-                Year
-              </TableCell>
               <TableCell align="center" sx={{ border: 1 }}>
                 Singapore Citizens (SGD)
               </TableCell>
