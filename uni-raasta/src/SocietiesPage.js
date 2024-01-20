@@ -18,73 +18,73 @@ const SocietiesPage = () => {
       id: 1,
       name: "NUS Chinese Studies Students' Society",
       link: 'https://nus.campuslabs.com/engage/organization/nus-chinese-studies-students-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/nuscsss.jpg',
     },
     {
       id: 2,
       name: 'NUS Economics Society',
       link: 'https://nus.campuslabs.com/engage/organization/nus-economics-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/nuses.jpg',
     },
     {
       id: 3,
       name: 'NUS Dental Society',
       link: 'https://nus.campuslabs.com/engage/organization/nus-dental-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/nusds.jpg',
     },
     {
       id: 4,
       name: 'NUS History Society',
       link: 'https://nus.campuslabs.com/engage/organization/nus-history-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/nushs.png',
     },
     {
       id: 5,
       name: 'NUS Investment Society',
       link: 'https://nus.campuslabs.com/engage/organization/nus-investment-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/nusis.jpg',
     },
     {
       id: 6,
       name: 'NUS Literary Society',
       link: 'https://nus.campuslabs.com/engage/organization/nus-literary-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/nusls.jpg',
     },
     {
       id: 7,
       name: 'NUS Mathematics Society',
       link: 'https://nus.campuslabs.com/engage/organization/nus-mathematics-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/nusms.png',
     },
     {
       id: 8,
       name: 'NUS Medical Society',
       link: 'https://nus.campuslabs.com/engage/organization/nus-medical-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/med.jpg',
     },
     {
       id: 9,
       name: 'NUS Muslim Society',
       link: 'https://nus.campuslabs.com/engage/organization/nus-muslim-society',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/mus.jpg',
     },
     {
       id: 10,
       name: 'NUS Physics Society',
       link: 'https://nus.campuslabs.com/engage/organization/physoc',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/nusps.png',
     },
     {
       id: 11,
       name: 'NUS Psychology Society',
       link: 'https://nus.campuslabs.com/engage/organization/nuspsychsoc',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/psycho.png',
     },
     {
       id: 12,
       name: 'Society of Social Work Students',
       link: 'https://nus.campuslabs.com/engage/organization/ssws',
-      imageURL: 'path/to/image1.jpg',
+      imageURL: '/pictures/Societies/ssws.jpg',
     },
     // Add more societies as needed
   ];
@@ -252,39 +252,44 @@ const SocietiesPage = () => {
   return (
     <div className="page-container">
       {/* Societies Container */}
-      <div className="container" style={{ position: 'relative' }}>
+      <div className="container" style={{ marginBottom: '100px' }}>
         <Typography variant="h2">Societies</Typography>
         <Grid container spacing={3}>
           {renderClickableItems(societiesData)}
         </Grid>
 
         {/* "Find Out More" button for Societies */}
-        <Button
-          variant="outlined"
-          onClick={handleFindOutMoreSocieties}
-          sx={{ position: 'absolute', bottom: 16, right: 16, zIndex: 1 }}
-        >
-          Find Out More (Societies)
-        </Button>
+        <div style={{ position: 'relative', marginBottom: '100px' }}>
+          <Button
+            variant="outlined"
+            onClick={handleFindOutMoreSocieties}
+            sx={{ position: 'absolute', top:'20px', right: '40px', zIndex: 1 }}
+          >
+            Find Out More (Societies)
+          </Button>
+        </div>
       </div>
 
       {/* Clubs Container */}
-      <div className="container" style={{ position: 'relative' }}>
+      <div className="container" style={{ marginBottom: '100px' }}>
         <Typography variant="h2">Clubs</Typography>
         <Grid container spacing={3}>
           {renderClickableItems(clubsData)}
         </Grid>
 
         {/* "Find Out More" button for Clubs */}
-        <Button
-          variant="outlined"
-          onClick={handleFindOutMoreClubs}
-          sx={{ position: 'absolute', bottom: 16, right: 16, zIndex: 1 }}
-        >
-          Find Out More (Clubs)
-        </Button>
+        <div style={{ position: 'relative', marginBottom: '100px' }}>
+          <Button
+            variant="outlined"
+            onClick={handleFindOutMoreClubs}
+            sx={{ position: 'absolute', top: '20px', right: '40px', zIndex: 1 }}
+          >
+            Find Out More (Clubs)
+          </Button>
+        </div>
       </div>
 
+      {/* Interest Groups Container */}
       <Grid container spacing={3} direction="row" justifyContent="center">
         <Grid item xs={12} sm={12}>
           <Typography variant="h2">Interest Groups</Typography>
