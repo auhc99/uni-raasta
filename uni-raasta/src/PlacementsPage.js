@@ -7,6 +7,7 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableContainer,
   TableHead,
   TableRow,
   Card,
@@ -87,26 +88,26 @@ function PlacementsPage() {
       <Typography variant="h5" gutterBottom>
         Branch Details (As of 2022)
       </Typography>
-      <Paper>
+      <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Branch</TableCell>
-              <TableCell align="right">Employment Rate</TableCell>
-              <TableCell align="right">Median Salary</TableCell>
+              <TableCell sx={{ border: 1 }}>Branch</TableCell>
+              <TableCell align="right" sx={{ border: 1 }}>Employment Rate</TableCell>
+              <TableCell align="right" sx={{ border: 1 }}>Median Salary</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {branchData.map((branch, index) => (
-              <TableRow key={index}>
-                <TableCell>{branch.name}</TableCell>
-                <TableCell align="right">{branch.rate}</TableCell>
-                <TableCell align="right">{branch.salary}</TableCell>
+              <TableRow key={index} sx={{ border: 1 }}>
+                <TableCell sx={{ border: 1 }}>{branch.name}</TableCell>
+                <TableCell align="right" sx={{ border: 1 }}>{branch.rate}</TableCell>
+                <TableCell align="right" sx={{ border: 1 }}>{branch.salary}</TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
-      </Paper>
+        </TableContainer>
     </Box>
   );
 }

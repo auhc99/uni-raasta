@@ -27,42 +27,39 @@ const FeesPage = () => {
       <Typography variant="h4" color="primary" gutterBottom>
         Tuition Fees
       </Typography>
-
-      <TableContainer component={Paper}>
+      <Typography variant="h5" gutterBottom>
+      Per Annum Amounts
+      </Typography>
+      <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead>
             <TableRow>
-              <TableCell align="center" colSpan={5}>
-                Per Annum Amounts
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Matriculation Year
               </TableCell>
-              <TableCell align="center" colSpan={3}>
+              <TableCell align="center" colSpan={3} sx={{ border: 1 }}>
                 Fees payable by students in receipt of MOE Tuition Grant
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Fees payable by students NOT in receipt of MOE Tuition Grant (Inclusive of GST)
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell align="center">Year</TableCell>
-              <TableCell align="center">Singapore Citizens (SGD)</TableCell>
-              <TableCell align="center">Singapore Permanent Residents (SGD)</TableCell>
-              <TableCell align="center">International Students (SGD)</TableCell>
-              <TableCell align="center">No Tuition Grant (SGD)</TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>Year</TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>Singapore Citizens (SGD)</TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>Singapore Permanent Residents (SGD)</TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>International Students (SGD)</TableCell>
+              <TableCell align="center" sx={{ border: 1 }}>No Tuition Grant (SGD)</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row, index) => (
-              <TableRow key={index}>
-                <TableCell align="center">{row.matriculationYear}</TableCell>
-                <TableCell align="center">{row.tierA.toLocaleString()}</TableCell>
-                <TableCell align="center">{row.tierB.toLocaleString()}</TableCell>
-                <TableCell align="center">{row.tierC.toLocaleString()}</TableCell>
-                <TableCell align="center">{row.noTuitionGrant.toLocaleString()}</TableCell>
+              <TableRow key={index} sx={{ border: 1 }}>
+                <TableCell align="center" sx={{ border: 1 }}>{row.matriculationYear}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row.tierA.toLocaleString()}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row.tierB.toLocaleString()}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row.tierC.toLocaleString()}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>{row.noTuitionGrant.toLocaleString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>
