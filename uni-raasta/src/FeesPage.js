@@ -25,7 +25,7 @@ const FeesPage = () => {
   return (
     <Box my={2}>
       <Typography variant="h4" color="primary" gutterBottom>
-      Tuition Fees
+        Tuition Fees
       </Typography>
 
       <TableContainer component={Paper}>
@@ -70,6 +70,6 @@ const FeesPage = () => {
       </TableContainer>
     </Box>
   );
-}
+};
 
 export default FeesPage;

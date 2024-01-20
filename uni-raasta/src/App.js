@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import AccommodationsPage from './AccommodationsPage';
 import AdmissionsPage from './AdmissionsPage';
 import FeesPage from './FeesPage';
+import PlacementsPage from './PlacementsPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/accommodations" element={<AccommodationsPage />} />
         <Route path="/admissions" element={<AdmissionsPage />} />
         <Route path="/fees" element={<FeesPage />} />
+        <Route path="/placements" element={<PlacementsPage />} />
         {/* ... other routes */}
       </Routes>
     </div>

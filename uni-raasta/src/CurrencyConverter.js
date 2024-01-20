@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { 
-  Box, 
-  TextField, 
-  MenuItem, 
-  Typography, 
-  Paper 
-} from '@mui/material';
+import { Box, TextField, MenuItem, Typography, Paper } from '@mui/material';
 
 const CurrencyConverter = () => {
   const [amount, setAmount] = useState(1);
@@ -33,7 +27,9 @@ const CurrencyConverter = () => {
   useEffect(() => {
     const fetchExchangeRate = async () => {
       try {
-        const response = await axios.get(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`);
+        const response = await axios.get(
+          `https://api.exchangerate-api.com/v4/latest/${fromCurrency}`
+        );
         const rate = response.data.rates[toCurrency];
         setExchangeRate(rate);
       } catch (error) {
@@ -53,7 +49,7 @@ const CurrencyConverter = () => {
     }
   }, [amount, exchangeRate]);
 
-  const handleAmountChange = (e) => {
+  const handleAmountChange = e => {
     setAmount(e.target.value);
   };
 
@@ -75,10 +71,10 @@ const CurrencyConverter = () => {
           select
           label="From"
           value={fromCurrency}
-          onChange={(e) => setFromCurrency(e.target.value)}
+          onChange={e => setFromCurrency(e.target.value)}
           sx={{ marginRight: 2, width: '25ch' }}
         >
-          {currencies.map((currency) => (
+          {currencies.map(currency => (
             <MenuItem key={currency} value={currency}>
               {currency}
             </MenuItem>
@@ -88,10 +84,10 @@ const CurrencyConverter = () => {
           select
           label="To"
           value={toCurrency}
-          onChange={(e) => setToCurrency(e.target.value)}
+          onChange={e => setToCurrency(e.target.value)}
           sx={{ width: '25ch' }}
         >
-          {currencies.map((currency) => (
+          {currencies.map(currency => (
             <MenuItem key={currency} value={currency}>
               {currency}
             </MenuItem>
@@ -103,6 +99,6 @@ const CurrencyConverter = () => {
       </Typography>
     </Paper>
   );
-}
+};
 
 export default CurrencyConverter;
