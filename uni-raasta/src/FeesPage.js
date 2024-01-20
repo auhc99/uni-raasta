@@ -67,17 +67,14 @@ const tuitionFeeRows = [
   },
 ];
 
-
 const bubbleStyle = {
   position: 'center',
   backgroundColor: 'rgba(100, 150, 200, 0.1)', // Blue color with transparency
   borderRadius: '10px', // Rounded corners
   padding: '15px', // Padding inside the bubble
   maxWidth: '1480px', // Maximum width of the bubble
-  margin: '20px 0' // Margin around the bubble
+  margin: '20px 0', // Margin around the bubble
 };
-
-
 
 const tableHeaderStyle = {
   backgroundColor: 'rgba(255, 165, 0, 0.8)', // Translucent orange background
@@ -86,15 +83,12 @@ const tableHeaderStyle = {
   margin: '20px 0', // Margin around the table container
 };
 
-
 const tableBodyStyle = {
   backgroundColor: 'rgba(255,238,170, 0.6)', // Translucent orange background
   borderRadius: '10px', // Rounded corners
   padding: '15px', // Padding inside the table container
   margin: '20px 0', // Margin around the table container
 };
-
-
 
 const FeesPage = () => {
   return (
@@ -179,7 +173,6 @@ const FeesPage = () => {
         </Table>
       </TableContainer>
 
-
       <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Miscellaneous Student Fees
       </Typography>
@@ -251,15 +244,33 @@ const FeesPage = () => {
           <TableBody sx={tableBodyStyle}>
             {miscellaneousFeesRows.map(row => (
               <TableRow sx={{ border: 1 }}>
-                <TableCell align="center" sx={{ border: 1 }}>{row[0]}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row[1]}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row[2]}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row[3]}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row[4]}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row[5]}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row[6]}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row[7]}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row[8]}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[0]}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[1]}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[2]}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[3]}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[4]}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[5]}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[6]}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[7]}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row[8]}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -303,8 +314,12 @@ const FeesPage = () => {
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>Student Type</TableCell>
-              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>Semester</TableCell>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
+                Student Type
+              </TableCell>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
+                Semester
+              </TableCell>
               <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 Revised Fee Pro-rated Based on Student's Semester Workload
               </TableCell>
@@ -313,9 +328,15 @@ const FeesPage = () => {
           <TableBody sx={tableBodyStyle}>
             {tuitionFeeRows.map((row, index) => (
               <TableRow key={index} sx={{ border: 1 }}>
-                <TableCell align="center" sx={{ border: 1 }}>{row.studentType}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row.semester}</TableCell>
-                <TableCell align="center" sx={{ border: 1 }}>{row.feeDescription}</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row.studentType}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row.semester}
+                </TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  {row.feeDescription}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -382,6 +403,19 @@ const FeesPage = () => {
         termination of candidature by the University, after Instructional Week 2 of the semester
         will be liable to pay fees for the entire semester. Requests for refund will generally not
         be considered.
+      </Typography>
+
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
+        Scholarship and Financial Aid
+      </Typography>
+
+      <Typography variant="body1" paragraph style={bubbleStyle}>
+        The University offers a range of scholarships and financial aid schemes to help students
+        meet the cost of their university education. For more information, please visit the{' '}
+        <a href="https://www.nus.edu.sg/oam/" target="_blank" rel="noopener noreferrer">
+          Office of Admissions
+        </a>{' '}
+        website.
       </Typography>
     </Box>
   );

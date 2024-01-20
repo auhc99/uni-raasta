@@ -12,7 +12,11 @@ const NavBar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <img alt="NUS Logo" src={'/pictures/nus/nus.png'} style ={{height: '50px', width: '100px'}}/> 
+        <img
+          alt="NUS Logo"
+          src={'/pictures/nus/nus.png'}
+          style={{ height: '50px', width: '100px' }}
+        />
         <Tabs value={value} onChange={handleChange} textColor="inherit">
           <Tab label="Admissions" component={Link} to="/admissions" />
           <Tab label="Fees" component={Link} to="/fees" />
