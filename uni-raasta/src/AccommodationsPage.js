@@ -14,6 +14,7 @@ import {
   Paper,
   Link,
 } from '@mui/material';
+import AccommodationsDropDown from './AccommodationsDropDown';
 
 const accommodationsData = [
   {
@@ -59,6 +60,98 @@ const accommodationsData = [
     toilet: 'Common',
     airCondition: 'Non air-con',
     link: 'https://nus.edu.sg/osa/residential-options/houses',
+  },
+];
+
+const hallsOfResidenceData = [
+  {
+    name: 'Eusoff Hall',
+    logo: 'https://nus.edu.sg/osa/images/librariesprovider2/default-album/eusoff-logo.png?sfvrsn=6c4685b9_0',
+    link: 'https://nus.edu.sg/osa/eusoffhall/home-(v2)',
+  },
+  {
+    name: 'Temasek Hall',
+    logo: 'https://nus.edu.sg/osa/images/librariesprovider8/default-album/th-logo.png?sfvrsn=71d03d67_0',
+    link: 'https://nus.edu.sg/osa/temasekhall/home',
+  },
+  {
+    name: 'Kent Ridge Hall',
+    logo: 'https://nus.edu.sg/osa/images/librariesprovider3/default-album/kr-logo.png?sfvrsn=790800fb_0',
+    link: 'https://nus.edu.sg/osa/kentridgehall/home',
+  },
+  {
+    name: 'King Edward VII Hall',
+    logo: 'https://nus.edu.sg/osa/images/default-source/kevii-hall/about-kevii/test4e2f0c199bffd490fbfed3ab5b3082bb5.png?sfvrsn=d1c0ec06_0',
+    link: 'https://nus.edu.sg/osa/keviihall/home',
+  },
+  {
+    name: 'Raffles Hall',
+    logo: 'https://nus.edu.sg/osa/images/librariesprovider6/default-album/rh-logo.png?sfvrsn=946bf7ca_0',
+    link: 'https://nus.edu.sg/osa/raffleshall/home',
+  },
+  {
+    name: 'Sheares Hall',
+    logo: 'https://nus.edu.sg/osa/images/librariesprovider7/default-album/sh-logo.png?sfvrsn=8f923101_0',
+    link: 'https://nus.edu.sg/osa/sheareshall/home',
+  },
+];
+
+const residentialCollegesData = [
+  {
+    name: 'University Scholars Programme (USP) / Cinnamon College',
+    logo: 'https://www.usp.nus.edu.sg/nus_usp/wp-content/uploads/2019/09/sublogo_NEW-Recovered.png',
+    link: 'https://www.usp.nus.edu.sg/',
+  },
+  {
+    name: 'Ridge View Residential College (RVRC)',
+    logo: 'https://rvrc.nus.edu.sg/wp-content/themes/nus-theme-v2-php8/images/nus-logo.png',
+    link: 'https://rvrc.nus.edu.sg/',
+  },
+  {
+    name: 'College of Alice & Peter Tan (CAPT)',
+    logo: 'https://capt.nus.edu.sg/wp-content/themes/consap-capt/assets/images/logo.png',
+    link: 'https://capt.nus.edu.sg/',
+  },
+  {
+    name: 'Residential College 4 (RC4)',
+    logo: 'https://rc4.nus.edu.sg/wp-content/uploads/2022/06/RC4-logo-teal-1-300x112.png',
+    link: 'https://rc4.nus.edu.sg/',
+  },
+  {
+    name: 'Tembusu College',
+    logo: 'https://tembusu.nus.edu.sg/images/theme/logos.svg',
+    link: 'https://tembusu.nus.edu.sg/',
+  },
+];
+
+const studentResidencesData = [
+  {
+    name: 'PGP Residence (PGPR)',
+    logo: 'https://nus.edu.sg/osa/images/librariesprovider12/default-album/pgpr-logo/pgpr-new-logo-transparent.png?sfvrsn=c13839e7_0',
+    link: 'https://nus.edu.sg/osa/pgpr/home',
+  },
+  {
+    name: 'UTown Residence',
+    logo: 'https://nus.edu.sg/osa/images/librariesprovider14/default-album/utr_logo.png?sfvrsn=d48cb707_0',
+    link: 'https://nus.edu.sg/osa/utr/home',
+  },
+];
+
+const housesData = [
+  {
+    name: 'Helix House',
+    logo: 'https://nus.edu.sg/osa/images/helixhouselibraries/default-album/helixhouse_tn.png?sfvrsn=a503637b_0',
+    link: 'https://nus.edu.sg/osa/helixhouse',
+  },
+  {
+    name: 'Light House',
+    logo: 'https://nus.edu.sg/osa/images/librariesprovider15/default-album/lh-logo.png',
+    link: 'https://nus.edu.sg/osa/lighthouse/home',
+  },
+  {
+    name: 'Pioneer House',
+    logo: 'https://nus.edu.sg/osa/images/default-source/pgp-house/pgph-logo1.png?sfvrsn=bf4e0cc3_6',
+    link: 'https://nus.edu.sg/osa/pioneerhouse/',
   },
 ];
 
@@ -156,6 +249,15 @@ const AccommodationsPage = () => {
           </Step>
         ))}
       </Stepper>
+
+      {/* Halls of Residence Section */}
+      <AccommodationsDropDown title="Halls of Residence" data={hallsOfResidenceData} />
+      {/* Residential Colleges Section */}
+      <AccommodationsDropDown title="Residential Colleges" data={residentialCollegesData} />
+      {/* Student Residences Section */}
+      <AccommodationsDropDown title="Student Residences" data={studentResidencesData} />
+      {/* Houses Section */}
+      <AccommodationsDropDown title="Houses" data={housesData} />
 
       {/* Footer with Link to NUS Residential Options Page */}
       <Typography
