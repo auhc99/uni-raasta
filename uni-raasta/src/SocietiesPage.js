@@ -23,17 +23,17 @@ const SocietiesPage = () => {
     ];
 
     const clubsData = [
-        { id: 1, name: "NUS Drone Club", link: 'https://nus.campuslabs.com/engage/organization/nus-drone-club', imageURL: 'path/to/image1.jpg' },
+        { id: 1, name: "NUS Drone Club", link: 'https://nus.campuslabs.com/engage/organization/nus-drone-club', imageURL: 'pictures\Clubs\drone.jpg' },
         { id: 2, name: "NUS Motoring Club", link: 'https://nus.campuslabs.com/engage/organization/nus-motoring-club', imageURL: 'path/to/image1.jpg' },
         { id: 3, name: "NUS Skating", link: 'https://nus.campuslabs.com/engage/organization/nus-students-sports-club', imageURL: 'path/to/image1.jpg' },
         { id: 4, name: "NUS Students' Sports Club", link: 'https://nus.campuslabs.com/engage/organization/nus-students-sports-club', imageURL: 'path/to/image1.jpg' },
         { id: 5, name: "Rovers Adventure club", link: 'https://nus.campuslabs.com/engage/organization/rovers-adventure-club', imageURL: 'path/to/image1.jpg' },
-        { id: 6, name: "Boxing", link: 'https://www.nussportsclub.org/clubs/boxing', imageURL: '"\pictures\Clubs\boxing-(2).jpg"' },
+        { id: 6, name: "Boxing", link: 'https://www.nussportsclub.org/clubs/boxing', imageURL: '\pictures\Clubs\boxing-(2).jpg' },
         { id: 7, name: "Intellectual Games Club", link: 'https://www.nussportsclub.org/clubs/igc', imageURL: 'path/to/image1.jpg' },
         { id: 8, name: "NUS Kayaking", link: 'https://nus.campuslabs.com/engage/organization/nuskayaking', imageURL: 'path/to/image1.jpg' },
         { id: 9, name: "NUS Judo", link: 'https://nus.campuslabs.com/engage/organization/nus-judo-team', imageURL: 'path/to/image1.jpg' },
         { id: 10, name: "NUS Toastmasters Club", link: 'https://nus.campuslabs.com/engage/organization/nus-toastmasters-club', imageURL: 'path/to/image1.jpg' },
-        { id: 11, name: "NUS Board Games", link: 'https://nus.campuslabs.com/engage/organization/nus-board-games', imageURL: 'path/to/image1.jpg' },
+        { id: 11, name: "NUS Board Games", link: 'https://nus.campuslabs.com/engage/organization/nus-board-games', imageURL: 'uni-raasta\src\pictures\Clubs\boardgames.jpeg' },
         { id: 12, name: "NUS Comedy Club", link: 'https://nus.campuslabs.com/engage/organization/nuscomedyclub', imageURL: 'path/to/image1.jpg' },
         // Add more clubs as needed
     ];
