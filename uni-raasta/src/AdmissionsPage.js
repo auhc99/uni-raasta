@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Container,
+  Box,
   Stepper,
   Step,
   StepLabel,
@@ -65,7 +65,7 @@ const AdmissionsPage = () => {
   };
 
   return (
-    <Container>
+    <Box my={2}>
       <Typography variant="h4" color="primary" gutterBottom>
         Undergraduate Admissions
       </Typography>
@@ -201,7 +201,7 @@ const AdmissionsPage = () => {
           official NUS admissions requirements page.
         </Link>
       </Typography>
-    </Container>
+    </Box>
   );
 };
 
