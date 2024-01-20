@@ -54,68 +54,61 @@ const branchData = [
 
 const PlacementsPage = () => {
   return (
-    <Box my={2}>
+    <Box my={4} mx={2}>
       <Typography variant="h4" color="primary" gutterBottom>
         NUS Computer Science Placements
       </Typography>
-      {/* Career Resources Section */}
-      <Typography variant="h5" gutterBottom>
-        Career Resources for Students
-      </Typography>
-      <Grid container spacing={3} justifyContent="center">
+
+      <Grid container spacing={4} justifyContent="center">
         {resourceData.map((resource, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card
-              sx={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
+            <Card raised sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
               <CardContent>
-                <Typography variant="h6" component="div">
+                <Typography gutterBottom variant="h5" component="div">
                   {resource.title}
                 </Typography>
-                <Typography variant="body2">{resource.description}</Typography>
+                <Typography variant="body1" color="text.secondary">
+                  {resource.description}
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
         ))}
       </Grid>
 
-      {/* Branch Details Section */}
-      <Typography variant="h5" gutterBottom>
-        Branch Details (As of 2022)
-      </Typography>
-      <TableContainer component={Paper} sx={{ border: 1 }}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell sx={{ border: 1 }}>Branch</TableCell>
-              <TableCell align="right" sx={{ border: 1 }}>
-                Employment Rate
-              </TableCell>
-              <TableCell align="right" sx={{ border: 1 }}>
-                Median Salary
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {branchData.map((branch, index) => (
-              <TableRow key={index} sx={{ border: 1 }}>
-                <TableCell sx={{ border: 1 }}>{branch.name}</TableCell>
-                <TableCell align="right" sx={{ border: 1 }}>
-                  {branch.rate}
+      <Box mt={5}>
+        <Typography variant="h5" gutterBottom align="center">
+          Branch Details (As of 2022)
+        </Typography>
+        <TableContainer component={Paper} elevation={3} sx={{ border: 1 }}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell sx={{ border: 1 }}>Branch</TableCell>
+                <TableCell align="center" sx={{ border: 1 }}>
+                  Employment Rate
                 </TableCell>
-                <TableCell align="right" sx={{ border: 1 }}>
-                  {branch.salary}
+                <TableCell align="center" sx={{ border: 1 }}>
+                  Median Salary
                 </TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {branchData.map((branch, index) => (
+                <TableRow key={index} sx={{ border: 1 }}>
+                  <TableCell sx={{ border: 1 }}>{branch.name}</TableCell>
+                  <TableCell align="center" sx={{ border: 1 }}>
+                    {branch.rate}
+                  </TableCell>
+                  <TableCell align="center" sx={{ border: 1 }}>
+                    {branch.salary}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Box>
     </Box>
   );
 };
