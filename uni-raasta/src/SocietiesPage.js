@@ -336,13 +336,14 @@ const renderClickableItems = (data) => (
               component="div"
               sx={{
                 height: '300px',
-                width: '300px',
+                width: '360px',
                 backgroundImage: `url(${item.imageURL})`,
-                backgroundSize: 'cover',
+                backgroundSize: 'contain',
                 backgroundPosition: 'center',
                 display: 'flex',
                 alignItems: 'center', // Center the content vertically
                 justifyContent: 'center', // Center the content horizontally
+                margin: 0 
               }}
             />
             {/* Card Content */}

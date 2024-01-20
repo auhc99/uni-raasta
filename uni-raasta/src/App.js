@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from './NavBar';
+import './App.css';
 import AccommodationsPage from './AccommodationsPage';
 import AdmissionsPage from './AdmissionsPage';
 import SocietiesPage from './SocietiesPage';
