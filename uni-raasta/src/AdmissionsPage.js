@@ -94,7 +94,7 @@ const AdmissionsPage = () => {
       </TableContainer>
 
       {/* Application Process Section */}
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h5" gutterBottom my={2}>
         Application Process
       </Typography>
       <Stepper orientation="vertical" sx={{ mb: 4 }}>
