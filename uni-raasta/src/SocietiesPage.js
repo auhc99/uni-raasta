@@ -42,4 +42,4 @@ const ClubItem = ({ name, description }) => (
     </li>
 );
 
-export default SocietyClubPage;
+export default SocietiesPage;
