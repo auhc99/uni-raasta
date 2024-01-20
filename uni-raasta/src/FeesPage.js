@@ -67,6 +67,35 @@ const tuitionFeeRows = [
   },
 ];
 
+
+const bubbleStyle = {
+  position: 'relative',
+  backgroundColor: 'rgba(150, 150, 150, 0.1)', // Blue color with transparency
+  borderRadius: '10px', // Rounded corners
+  padding: '15px', // Padding inside the bubble
+  maxWidth: '1500px', // Maximum width of the bubble
+  margin: '20px 0' // Margin around the bubble
+};
+
+
+
+const tableHeaderStyle = {
+  backgroundColor: 'rgba(255, 165, 0, 0.8)', // Translucent orange background
+  borderRadius: '10px', // Rounded corners
+  padding: '15px', // Padding inside the table container
+  margin: '20px 0', // Margin around the table container
+};
+
+
+const tableBodyStyle = {
+  backgroundColor: 'rgba(255,238,170, 0.6)', // Translucent orange background
+  borderRadius: '10px', // Rounded corners
+  padding: '15px', // Padding inside the table container
+  margin: '20px 0', // Margin around the table container
+};
+
+
+
 const FeesPage = () => {
   return (
     <Box my={2}>
@@ -74,7 +103,7 @@ const FeesPage = () => {
         Tuition Fees
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         The cohort-based fee system is introduced for the new undergraduate intake of all
         Faculties/Schools from AY2008/09. Under the cohort-based fee system, tuition fee for an
         intake cohort of students will be fixed throughout the student's candidature. While fees
@@ -84,7 +113,7 @@ const FeesPage = () => {
         their undergraduate studies.
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         National Servicemen who had accepted admission to NUS earlier but plan to register and
         enroll as a student with the current cohort and beyond will be charged the tuition fees
         prevailing at the time they accepted their offer of admission. If the National Serviceman
@@ -99,7 +128,7 @@ const FeesPage = () => {
 
       <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
-          <TableHead>
+          <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
               <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Matriculation Year
@@ -129,7 +158,7 @@ const FeesPage = () => {
               </TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody sx={tableBodyStyle}>
             {rows.map((row, index) => (
               <TableRow key={index} sx={{ border: 1 }}>
                 <TableCell align="center" sx={{ border: 1 }}>
@@ -153,11 +182,12 @@ const FeesPage = () => {
         </Table>
       </TableContainer>
 
-      <Typography variant="h4" color="primary" gutterBottom>
+
+      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
         Miscellaneous Student Fees
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         Miscellaneous student fees help meet part of the costs incurred by the University in
         providing services to the student community that are either not covered or only partially
         covered by the tuition fee and government subsidy. These services include healthcare for
@@ -169,7 +199,7 @@ const FeesPage = () => {
 
       <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
-          <TableHead>
+          <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
               <TableCell align="center" colSpan={1} rowSpan={3} sx={{ border: 1 }}>
                 Matriculation Year
@@ -221,7 +251,7 @@ const FeesPage = () => {
             </TableRow>
           </TableHead>
 
-          <TableBody>
+          <TableBody sx={tableBodyStyle}>
             {miscellaneousFeesRows.map(row => (
               <TableRow sx={{ border: 1 }}>
                 <TableCell align="center" sx={{ border: 1 }}>{row[0]}</TableCell>
@@ -239,15 +269,15 @@ const FeesPage = () => {
         </Table>
       </TableContainer>
 
-      <Typography variant="h4" color="primary" gutterBottom>
+      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
         Tuition Fee beyond Normal candidature
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         The Tuition Fee beyond Normal Candidature is applicable to students who are admitted into an
         undergraduate degree under the modular system@ in NUS.
       </Typography>
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         @ Notes: - UG students admitted to non-modular faculties namely, Medicine / Dentistry / Law
         where the programme structure and duration are fixed (except Law DDP students whose 2nd
         degree is registered with a modular faculty), are excluded. - UG students admitted to
@@ -255,14 +285,14 @@ const FeesPage = () => {
         for these students are managed separately.
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         With effect from the admission cohort of AY2016/2017, students admitted into an
         undergraduate degree under the modular system@ in NUS and who take longer than the normal
         candidature period to complete their degree requirements will have to pay partial
         non-subsidized fees, culminating in full non-subsidized fees, during the extended semesters.
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         In view that the Ministry of Education provides a Tuition Grant to subsidize a student's
         tuition fees up to the normal candidature period, the tuition fee payable beyond that would
         be the full non-subsidized semestral fees. To mitigate the impact of higher fees, the
@@ -274,7 +304,7 @@ const FeesPage = () => {
 
       <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
-          <TableHead>
+          <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
               <TableCell align="center" sx={{ border: 1 }}>Student Type</TableCell>
               <TableCell align="center" sx={{ border: 1 }}>Semester</TableCell>
@@ -283,7 +313,7 @@ const FeesPage = () => {
               </TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody sx={tableBodyStyle}>
             {tuitionFeeRows.map((row, index) => (
               <TableRow key={index} sx={{ border: 1 }}>
                 <TableCell align="center" sx={{ border: 1 }}>{row.studentType}</TableCell>
@@ -295,24 +325,24 @@ const FeesPage = () => {
         </Table>
       </TableContainer>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         *Given that the student reads x-unit of courses in the semester concerned, the 'Workload%'
         is capped at 100% if x exceeds 20 units and x unit/20 units if otherwise, for fee
         computation purposes, i.e., tuition fee is pro-rated for workload less than 20 units.
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         Students who register for course(s) in the Special Term immediately following the expiry of
         their normal candidature period will continue to pay subsidised fees on a per course basis.
         However, for the Special Terms beyond that, the Special Term fees payable will be the full
         non-subsidised semestral fees pro-rated based on the number of units read.
       </Typography>
 
-      <Typography variant="h4" color="primary" gutterBottom>
+      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
         Fee Payment Procedures
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         The{' '}
         <a
           href="https://www.nus.edu.sg/finance/students/student-finance-matters.html"
@@ -326,11 +356,11 @@ const FeesPage = () => {
         Student Bill online at least 2 weeks before the scheduled deadline for fee payment.
       </Typography>
 
-      <Typography variant="h4" color="primary" gutterBottom>
+      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
         Late and Partial Payment Penalties
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         Students who do not meet fee payment deadlines stipulated by the{' '}
         <a
           href="https://www.nus.edu.sg/finance/students/student-finance-matters.html"
@@ -346,11 +376,11 @@ const FeesPage = () => {
         students with overdue fees may have their candidature of study terminated.
       </Typography>
 
-      <Typography variant="h4" color="primary" gutterBottom>
+      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
         Refund Policy
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" paragraph style={bubbleStyle}>
         Students who leave the University, either through withdrawal of their own accord or
         termination of candidature by the University, after Instructional Week 2 of the semester
         will be liable to pay fees for the entire semester. Requests for refund will generally not
