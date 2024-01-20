@@ -69,7 +69,7 @@ const tuitionFeeRows = [
 
 
 const bubbleStyle = {
-  position: 'relative',
+  position: 'center',
   backgroundColor: 'rgba(150, 150, 150, 0.1)', // Blue color with transparency
   borderRadius: '10px', // Rounded corners
   padding: '15px', // Padding inside the bubble
@@ -99,7 +99,7 @@ const tableBodyStyle = {
 const FeesPage = () => {
   return (
     <Box my={2}>
-      <Typography variant="h4" color="primary" gutterBottom>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Tuition Fees
       </Typography>
 
@@ -130,27 +130,27 @@ const FeesPage = () => {
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={1} rowSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} rowSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 Matriculation Year
               </TableCell>
-              <TableCell align="center" colSpan={3} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={3} sx={{ border: 1, fontSize: 18 }}>
                 Fees payable by students in receipt of MOE Tuition Grant
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Fees payable by students NOT in receipt of MOE Tuition Grant (Inclusive of GST)
               </TableCell>
             </TableRow>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 Singapore Citizens (SGD)
               </TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 Singapore Permanent Residents (SGD)
               </TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 International Students (SGD)
               </TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 No Tuition Grant (SGD)
               </TableCell>
             </TableRow>
@@ -180,7 +180,7 @@ const FeesPage = () => {
       </TableContainer>
 
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Miscellaneous Student Fees
       </Typography>
 
@@ -198,51 +198,51 @@ const FeesPage = () => {
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={1} rowSpan={3} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} rowSpan={3} sx={{ border: 1, fontSize: 18 }}>
                 Matriculation Year
               </TableCell>
-              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 Student Services Fee (SSF) (Lab-based)
               </TableCell>
-              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} rowSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 Student Services Fee (SSF) (Non lab-based)
               </TableCell>
-              <TableCell align="center" colSpan={4} rowSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={4} rowSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Health Service Fee (HSF)
               </TableCell>
             </TableRow>
 
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 Local Students
               </TableCell>
-              <TableCell align="center" colSpan={2} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={2} sx={{ border: 1, fontSize: 18 }}>
                 International Students
               </TableCell>
             </TableRow>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Part-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Full-time
               </TableCell>
-              <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
+              <TableCell align="center" colSpan={1} sx={{ border: 1, fontSize: 18 }}>
                 Part-time
               </TableCell>
             </TableRow>
@@ -266,7 +266,7 @@ const FeesPage = () => {
         </Table>
       </TableContainer>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Tuition Fee beyond Normal candidature
       </Typography>
 
@@ -303,9 +303,9 @@ const FeesPage = () => {
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead sx={tableHeaderStyle}>
             <TableRow sx={{ border: 1 }}>
-              <TableCell align="center" sx={{ border: 1 }}>Student Type</TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>Semester</TableCell>
-              <TableCell align="center" sx={{ border: 1 }}>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>Student Type</TableCell>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>Semester</TableCell>
+              <TableCell align="center" sx={{ border: 1, fontSize: 18 }}>
                 Revised Fee Pro-rated Based on Student's Semester Workload
               </TableCell>
             </TableRow>
@@ -335,7 +335,7 @@ const FeesPage = () => {
         non-subsidised semestral fees pro-rated based on the number of units read.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Fee Payment Procedures
       </Typography>
 
@@ -353,7 +353,7 @@ const FeesPage = () => {
         Student Bill online at least 2 weeks before the scheduled deadline for fee payment.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Late and Partial Payment Penalties
       </Typography>
 
@@ -373,7 +373,7 @@ const FeesPage = () => {
         students with overdue fees may have their candidature of study terminated.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
         Refund Policy
       </Typography>
 
