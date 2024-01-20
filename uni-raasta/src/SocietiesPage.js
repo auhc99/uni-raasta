@@ -2,7 +2,7 @@
 import React from 'react';
 import './SocietiesPage.css'; // Import the CSS file for additional styling
 import { Link } from 'react-router-dom';
-import { Grid, Button, Typography } from '@mui/material';
+import { Grid, Card, CardContent, CardActions, Button, Typography } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'; // Import the OpenInNew icon
 
 const SocietiesPage = () => {
@@ -24,17 +24,17 @@ const SocietiesPage = () => {
 
     const clubsData = [
         { id: 1, name: "NUS Drone Club", link: 'https://nus.campuslabs.com/engage/organization/nus-drone-club', imageURL: '/pictures/Clubs/drone.jpg' },
-        { id: 2, name: "NUS Motoring Club", link: 'https://nus.campuslabs.com/engage/organization/nus-motoring-club', imageURL: 'path/to/image1.jpg' },
-        { id: 3, name: "NUS Skating", link: 'https://nus.campuslabs.com/engage/organization/nus-students-sports-club', imageURL: 'path/to/image1.jpg' },
-        { id: 4, name: "NUS Students' Sports Club", link: 'https://nus.campuslabs.com/engage/organization/nus-students-sports-club', imageURL: 'path/to/image1.jpg' },
-        { id: 5, name: "Rovers Adventure club", link: 'https://nus.campuslabs.com/engage/organization/rovers-adventure-club', imageURL: 'path/to/image1.jpg' },
-        { id: 6, name: "Boxing", link: 'https://www.nussportsclub.org/clubs/boxing', imageURL: '/pictures/Clubs/boxing-(2).jpg' },
-        { id: 7, name: "Intellectual Games Club", link: 'https://www.nussportsclub.org/clubs/igc', imageURL: 'path/to/image1.jpg' },
-        { id: 8, name: "NUS Kayaking", link: 'https://nus.campuslabs.com/engage/organization/nuskayaking', imageURL: 'path/to/image1.jpg' },
-        { id: 9, name: "NUS Judo", link: 'https://nus.campuslabs.com/engage/organization/nus-judo-team', imageURL: 'path/to/image1.jpg' },
-        { id: 10, name: "NUS Toastmasters Club", link: 'https://nus.campuslabs.com/engage/organization/nus-toastmasters-club', imageURL: 'path/to/image1.jpg' },
-        { id: 11, name: "NUS Board Games", link: 'https://nus.campuslabs.com/engage/organization/nus-board-games', imageURL: '/pictures/Clubs/boardgames.jpeg' },
-        { id: 12, name: "NUS Comedy Club", link: 'https://nus.campuslabs.com/engage/organization/nuscomedyclub', imageURL: 'path/to/image1.jpg' },
+        { id: 2, name: "NUS Motoring Club", link: 'https://nus.campuslabs.com/engage/organization/nus-motoring-club', imageURL: '/pictures/Clubs/motoring.png' },
+        { id: 3, name: "NUS Skating", link: 'https://nus.campuslabs.com/engage/organization/nus-students-sports-club', imageURL: '/pictures/Clubs/skating.png' },
+        { id: 4, name: "NUS Students' Sports Club", link: 'https://nus.campuslabs.com/engage/organization/nus-students-sports-club', imageURL: '/pictures/Clubs/nusssc.png' },
+        { id: 5, name: "Rovers Adventure club", link: 'https://nus.campuslabs.com/engage/organization/rovers-adventure-club', imageURL: '/pictures/Clubs/rac.jpg' },
+        { id: 6, name: "Boxing", link: 'https://www.nussportsclub.org/clubs/boxing', imageURL: '/pictures/Clubs/boxing.jpg' },
+        { id: 7, name: "Intellectual Games Club", link: 'https://www.nussportsclub.org/clubs/igc', imageURL: '/pictures/Clubs/igc.png' },
+        { id: 8, name: "NUS Kayaking", link: 'https://nus.campuslabs.com/engage/organization/nuskayaking', imageURL: '/pictures/Clubs/kayaking.png' },
+        { id: 9, name: "NUS Judo", link: 'https://nus.campuslabs.com/engage/organization/nus-judo-team', imageURL: '/pictures/Clubs/judo.png' },
+        { id: 10, name: "NUS Toastmasters Club", link: 'https://nus.campuslabs.com/engage/organization/nus-toastmasters-club', imageURL: '/pictures/Clubs/toastmaster.jpg' },
+        { id: 11, name: "NUS Board Games", link: 'https://nus.campuslabs.com/engage/organization/nus-board-games', imageURL: '/pictures/Clubs/boardgames.jpg' },
+        { id: 12, name: "NUS Comedy Club", link: 'https://nus.campuslabs.com/engage/organization/nuscomedyclub', imageURL: '/pictures/Clubs/comedy.jpg' },
         // Add more clubs as needed
     ];
 
@@ -88,35 +88,41 @@ const renderClickableItems = (data) => (
     <Grid container spacing={2}>
         {data.map((item) => (
             <Grid item key={item.id} xs={12} sm={6} md={3}>
-                {/* Use a Material-UI Button for styling */}
-                <Button
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    className="custom-button" // Apply a class for additional styling from the CSS file
-                    onClick={() => {
-                        window.open(item.link); // Redirect to the specified link
-                    }}
-                    style={{
-                        backgroundImage: `url(${item.imageURL})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        position: 'relative',
-                        minHeight: '200px', // Adjust the minimum height as needed
-                    }}
-                >
-                    {/* Content */}
-                    <div className="button-content">
-                        <Typography variant="h6" style={{ color: 'white', fontSize: '14px' }} noWrap>
+                {/* Use a Material-UI Card for styling */}
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    {/* Card Media */}
+                    <div
+                        style={{
+                            backgroundImage: `url(${item.imageURL})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            height: '200px', // Adjust the height as needed
+                        }}
+                    />
+
+                    {/* Card Content */}
+                    <CardContent sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" gutterBottom>
                             {item.name}
                         </Typography>
-                    </div>
+                    </CardContent>
 
-                    {/* Footer (e.g., additional icons) */}
-                    <div className="button-footer">
-                        <OpenInNewIcon style={{ color: 'white' }} />
-                    </div>
-                </Button>
+                    {/* Card Actions (e.g., button and additional icons) */}
+                    <CardActions>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            fullWidth
+                            onClick={() => {
+                                window.open(item.link); // Redirect to the specified link
+                            }}
+                        >
+                            View Details
+                        </Button>
+                        <div style={{ flex: '1' }} />
+                        <OpenInNewIcon />
+                    </CardActions>
+                </Card>
             </Grid>
         ))}
     </Grid>
