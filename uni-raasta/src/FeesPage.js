@@ -97,10 +97,10 @@ const FeesPage = () => {
         first offer accepted.
       </Typography>
 
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ border: 1 }}>
         <Table sx={{ minWidth: 700 }} aria-label="tuition fees table">
           <TableHead>
-            <TableRow>
+            <TableRow sx={{ border: 1 }}>
               <TableCell align="center" colSpan={1} sx={{ border: 1 }}>
                 Matriculation Year
               </TableCell>
@@ -111,7 +111,7 @@ const FeesPage = () => {
                 Fees payable by students NOT in receipt of MOE Tuition Grant (Inclusive of GST)
               </TableCell>
             </TableRow>
-            <TableRow>
+            <TableRow sx={{ border: 1 }}>
               <TableCell align="center" sx={{ border: 1 }}>
                 Year
               </TableCell>
