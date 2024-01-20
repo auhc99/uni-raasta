@@ -1,9 +1,8 @@
 // SocietiesPage.js
 import React from 'react';
 import './SocietiesPage.css'; // Import the CSS file for additional styling
-import { Link } from 'react-router-dom';
-import { Grid, Card, CardContent, CardActions, Button, Typography } from '@mui/material';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew'; // Import the OpenInNew icon
+import { Grid, Card, CardActionArea, CardMedia, CardContent, Typography, Button } from '@mui/material';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const SocietiesPage = () => {
     const societiesData = [
@@ -43,7 +42,7 @@ const SocietiesPage = () => {
         { id: 2, name: "Ridge View Residential College", link: 'https://rvrc.nus.edu.sg/college/interest-groups/', imageURL: 'path/to/image1.jpg' },
         { id: 3, name: "College of Alice and Peter Tan", link: 'https://capt.nus.edu.sg/activities-interest-groups', imageURL: 'path/to/image1.jpg' },
         { id: 4, name: "Tembusu College", link: 'https://tembusu.nus.edu.sg/college-life/interest-groups', imageURL: 'path/to/image1.jpg' },
-        { id: 5, name: "Kent Ridge Hall", link: 'https://nus.edu.sg/osa/kentridgehall/interest-groups', imageURL: 'path/to/image1.jpg' },
+        { id: 5, name: "Kent Ridge Hall", link: 'https://nus.edu.sg/osa/kentridgehall/cca', imageURL: 'path/to/image1.jpg' },
         { id: 6, name: "Eusoff Hall", link: 'https://nus.edu.sg/osa/eusoffhall/hall-life/cca', imageURL: 'path/to/image1.jpg' },
         { id: 7, name: "King Edward VII Hall", link: 'https://nus.edu.sg/osa/keviihall/residential-life/ccas', imageURL: 'path/to/image1.jpg' },
         { id: 8, name: "Raffles Hall", link: 'https://nus.edu.sg/osa/raffleshall/cca/sports#', imageURL: 'path/to/image1.jpg' },
@@ -53,6 +52,14 @@ const SocietiesPage = () => {
         { id: 12, name: "Duke-NUS", link: 'https://www.duke-nus.edu.sg/education/student-resources/student-life/student-interest-groups-(sig)', imageURL: 'path/to/image1.jpg' },
         // Add more interest groups as needed
     ];
+
+    const handleFindOutMoreSocieties = () => {
+        window.open('https://nus.edu.sg/osa/student-life/student-organisations-directory')
+    };
+
+    const handleFindOutMoreClubs = () => {
+        window.open('https://nus.edu.sg/osa/student-life/student-organisations-directory')
+    };
 
     return (
         <div className="page-container">
@@ -64,6 +71,14 @@ const SocietiesPage = () => {
                 <Grid item xs={12} sm={12}>
                     <Typography variant="h2">Societies</Typography>
                     {renderClickableItems(societiesData)}
+                    {/* "Find Out More" button for Societies */}
+                    <Button
+                        variant="outlined"
+                        onClick={handleFindOutMoreSocieties}
+                        sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                    >
+                        Find Out More (Societies)
+                    </Button>
                 </Grid>
             </Grid>
 
@@ -71,6 +86,14 @@ const SocietiesPage = () => {
                 <Grid item xs={12} sm={12}>
                     <Typography variant="h2">Clubs</Typography>
                     {renderClickableItems(clubsData)}
+                    {/* "Find Out More" button for Clubs */}
+                    <Button
+                        variant="outlined"
+                        onClick={handleFindOutMoreClubs}
+                        sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                    >
+                        Find Out More (Clubs)
+                    </Button>
                 </Grid>
             </Grid>
 
@@ -89,45 +112,48 @@ const renderClickableItems = (data) => (
         {data.map((item) => (
             <Grid item key={item.id} xs={12} sm={6} md={3}>
                 {/* Use a Material-UI Card for styling */}
-                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                    {/* Card Media */}
-                    <div
-                        style={{
-                            backgroundImage: `url(${item.imageURL})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            height: '200px', // Adjust the height as needed
+                <Card
+                    sx={{
+                        height: '100%',
+                        width: '90%', // Adjust the width as needed
+                        display: 'flex',
+                        flexDirection: 'column',
+                        '&:hover': {
+                            boxShadow: '0px 0px 10px 2px rgba(0, 0, 0, 0.2)',
+                        },
+                    }}
+                >
+                    {/* Card Action Area for making the entire card clickable */}
+                    <CardActionArea
+                        onClick={() => {
+                            window.open(item.link); // Redirect to the specified link
                         }}
-                    />
-
-                    {/* Card Content */}
-                    <CardContent sx={{ flexGrow: 1 }}>
-                        <Typography variant="h6" gutterBottom>
-                            {item.name}
-                        </Typography>
-                    </CardContent>
-
-                    {/* Card Actions (e.g., button and additional icons) */}
-                    <CardActions>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            fullWidth
-                            onClick={() => {
-                                window.open(item.link); // Redirect to the specified link
+                    >
+                        {/* Card Media with adjusted paddingTop for a smaller image */}
+                        <CardMedia
+                            component="div"
+                            sx={{
+                                height: '300px',
+                                width: '300px',
+                                backgroundImage: `url(${item.imageURL})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                display: 'flex',
+                                alignItems: 'center', // Center the content vertically
+                                justifyContent: 'center', // Center the content horizontally
                             }}
-                        >
-                            View Details
-                        </Button>
-                        <div style={{ flex: '1' }} />
-                        <OpenInNewIcon />
-                    </CardActions>
+                        />
+                        {/* Card Content */}
+                        <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
+                            <Typography variant="h6" gutterBottom>
+                                {item.name}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
                 </Card>
             </Grid>
         ))}
     </Grid>
 );
-
-
 
 export default SocietiesPage;
