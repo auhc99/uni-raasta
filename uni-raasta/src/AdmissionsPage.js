@@ -41,12 +41,13 @@ const AdmissionsPage = () => {
       {/* Add any other relevant sections based on the admissions guide */}
       
       <footer>
-        <p>For more detailed information, please visit the 
+        <p>For more detailed information, please visit the&nbsp;
           <a href="https://www.nus.edu.sg/oam/apply-to-nus/international-qualifications/admissions-requirements" target="_blank" rel="noopener noreferrer">
-            official NUS admissions requirements page.
+          official NUS admissions requirements page.
           </a>
         </p>
       </footer>
+
     </div>
   );
 };
