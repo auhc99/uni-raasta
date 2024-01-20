@@ -22,7 +22,7 @@ function NavBar() {
         <Tabs value={value} onChange={handleChange} textColor="inherit">
           <Tab label="Home" />
           <Tab label="Admissions" component={Link} to="/admissions" />
-          <Tab label="Fees" />
+          <Tab label="Fees" component={Link} to="/fees" />
           <Tab label="Societies and Clubs" />
           <Tab label="Placements" />
           <Tab label="Reviews" />
