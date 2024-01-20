@@ -22,6 +22,7 @@ Before starting, make sure you have npm installed on your machine.
 
 ```bash
 npm install npm@latest -g
+```
 
 ## Usage
 This portal is designed to help prospective students navigate the comprehensive offerings of NUS. Utilize the information provided to understand the full scope of what NUS has to offer and prepare all necessary documentation for the application process.
