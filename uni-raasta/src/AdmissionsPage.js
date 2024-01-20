@@ -1,53 +1,63 @@
 import React from 'react';
 
 const AdmissionsPage = () => {
+  const courses = [
+    { name: "Computer Science", link: "https://www.comp.nus.edu.sg/programmes/ug/cs/" },
+    { name: "Information Systems", link: "https://www.comp.nus.edu.sg/programmes/ug/is/" },
+    { name: "Computer Engineering", link: "https://www.eng.nus.edu.sg/ece/programmes/undergraduate-programmes/" },
+    { name: "Business Analytics", link: "https://www.comp.nus.edu.sg/programmes/ug/bza/" },
+    // ... other courses
+  ];
+
   return (
-    <div>
-      <h1>National University of Singapore Admissions</h1>
-      <h2>Undergraduate Admissions for International Students</h2>
+    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px' }}>
+      <h1 style={{ color: '#1F4788' }}>National University of Singapore Admissions</h1>
+      <h2 style={{ color: '#333' }}>Undergraduate Admissions for International Students</h2>
       
-      <section>
-        <h3>Application Period</h3>
-        <p>The application for Academic Year 2024-2025 commenced on 1 November 2023.</p>
+      {/* Admission Details */}
+      <section style={{ marginBottom: '20px' }}>
+        <h3>Admission Deadline</h3>
+        <p>The application deadline for international students is typically in March each year.</p>
+        <h3>Acceptance Rate</h3>
+        <p>NUS has a competitive acceptance rate. You can check the latest statistics on the official NUS website.</p>
+        <h3>Application Fees</h3>
+        <p>The application fee for international students is S$20.</p>
       </section>
       
+      {/* Programmes and Duration Table */}
       <section>
-        <h3>Application Deadlines</h3>
-        <p>For most international qualifications, the application closing date is 3 March 2024.</p>
+        <h3>Undergraduate Programmes and Duration</h3>
+        <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '20px' }}>
+          <tr style={{ backgroundColor: '#EEE', textAlign: 'left' }}>
+            <th style={{ padding: '8px' }}>Programme</th>
+            <th style={{ padding: '8px' }}>Duration</th>
+            <th style={{ padding: '8px' }}>Standardised Tests Required</th>
+            <th style={{ padding: '8px' }}>English Tests Required</th>
+          </tr>
+          {/* Map through each course to display information */}
+          {courses.map((course, index) => (
+            <tr key={index} style={{ borderBottom: '1px solid #DDD' }}>
+              <td style={{ padding: '8px' }}>
+                <a href={course.link} target="_blank" rel="noopener noreferrer">
+                  {course.name}
+                </a>
+              </td>
+              <td style={{ padding: '8px' }}>4 Years</td>
+              <td style={{ padding: '8px' }}>SAT/ACT</td>
+              <td style={{ padding: '8px' }}>IELTS/TOEFL</td>
+            </tr>
+          ))}
+        </table>
       </section>
-      
-      <section>
-        <h3>Application Fee</h3>
-        <p>A non-refundable application fee of S$20 must be paid during the application submission.</p>
-      </section>
-      
-      <section>
-        <h3>Undergraduate Courses for the School of Computing</h3>
-        <ul>
-          {/* List the courses based on the information provided by NUS */}
-          <li>Computer Science</li>
-          <li>Information Systems</li>
-          <li>Computer Engineering</li>
-          <li>Business Analytics</li>
-          {/* ... other courses */}
-        </ul>
-      </section>
-      
-      <section>
-        <h3>Scholarships and Financial Aid</h3>
-        <p>Scholarships are available for international students. Financial aid options include loans, subsidies, bursaries, and grants.</p>
-      </section>
-      
-      {/* Add any other relevant sections based on the admissions guide */}
-      
-      <footer>
+
+      {/* Footer with Link to Official Admissions Page */}
+      <footer style={{ backgroundColor: '#F5F5F5', padding: '10px', marginTop: '30px' }}>
         <p>For more detailed information, please visit the&nbsp;
           <a href="https://www.nus.edu.sg/oam/apply-to-nus/international-qualifications/admissions-requirements" target="_blank" rel="noopener noreferrer">
-          official NUS admissions requirements page.
+            official NUS admissions requirements page.
           </a>
         </p>
       </footer>
-
     </div>
   );
 };
