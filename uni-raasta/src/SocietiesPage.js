@@ -170,73 +170,73 @@ const SocietiesPage = () => {
       id: 1,
       name: 'Residential College 4',
       link: 'https://rc4.nus.edu.sg/rc4life/?tab=0',
-      imageURL: '/pictures/Interest Groups/rc4.jpg',
+      imageURL: '/pictures/Interest_Groups/rc4.jpg',
     },
     {
       id: 2,
       name: 'Ridge View Residential College',
       link: 'https://rvrc.nus.edu.sg/college/interest-groups/',
-      imageURL: '/pictures/Interest Groups/rvrc.png',
+      imageURL: '/pictures/Interest_Groups/rvrc.png',
     },
     {
       id: 3,
       name: 'College of Alice and Peter Tan',
       link: 'https://capt.nus.edu.sg/activities-interest-groups',
-      imageURL: '/pictures/Interest Groups/capt.jpg',
+      imageURL: '/pictures/Interest_Groups/capt.jpg',
     },
     {
       id: 4,
       name: 'Tembusu College',
       link: 'https://tembusu.nus.edu.sg/college-life/interest-groups',
-      imageURL: '/pictures/Interest Groups/tembusu.jpg',
+      imageURL: '/pictures/Interest_Groups/tembusu.jpg',
     },
     {
       id: 5,
       name: 'Kent Ridge Hall',
       link: 'https://nus.edu.sg/osa/kentridgehall/cca',
-      imageURL: '/pictures/Interest Groups/krh.png',
+      imageURL: '/pictures/Interest_Groups/krh.png',
     },
     {
       id: 6,
       name: 'Eusoff Hall',
       link: 'https://nus.edu.sg/osa/eusoffhall/hall-life/cca',
-      imageURL: '/pictures/Interest Groups/eh.jpg',
+      imageURL: '/pictures/Interest_Groups/eh.jpg',
     },
     {
       id: 7,
       name: 'King Edward VII Hall',
       link: 'https://nus.edu.sg/osa/keviihall/residential-life/ccas',
-      imageURL: '/pictures/Interest Groups/ke7h.png',
+      imageURL: '/pictures/Interest_Groups/ke7h.png',
     },
     {
       id: 8,
       name: 'Raffles Hall',
       link: 'https://nus.edu.sg/osa/raffleshall/cca/sports#',
-      imageURL: '/pictures/Interest Groups/rh.png',
+      imageURL: '/pictures/Interest_Groups/rh.png',
     },
     {
       id: 9,
       name: "Prince George's Park House",
       link: 'https://nus.edu.sg/osa/pioneerhouse/residential-life/interest-groups',
-      imageURL: '/pictures/Interest Groups/pgph.jpg',
+      imageURL: '/pictures/Interest_Groups/pgph.jpg',
     },
     {
       id: 10,
       name: 'Sheares Hall',
       link: 'https://nus.edu.sg/osa/sheareshall/cca',
-      imageURL: '/pictures/Interest Groups/sh.png',
+      imageURL: '/pictures/Interest_Groups/sh.png',
     },
     {
       id: 11,
       name: 'Temasek Hall',
       link: 'https://nus.edu.sg/osa/temasekhall/hall-life/committees',
-      imageURL: '/pictures/Interest Groups/th.png',
+      imageURL: '/pictures/Interest_Groups/th.png',
     },
     {
       id: 12,
       name: 'Duke-NUS',
       link: 'https://www.duke-nus.edu.sg/education/student-resources/student-life/student-interest-groups-(sig)',
-      imageURL: '/pictures/Interest Groups/duke.jpg',
+      imageURL: '/pictures/Interest_Groups/duke.jpg',
     },
     // Add more interest groups as needed
   ];
@@ -251,10 +251,15 @@ const SocietiesPage = () => {
 
   return (
     <div className="page-container">
+    <header>
+            <Typography variant="h2" color='primary' gutterBottom>NUS Societies, Clubs, and Interest Groups</Typography>
+        </header>
       {/* Societies Container */}
-      <div className="container" style={{ marginBottom: '100px' }}>
-        <Typography variant="h2">Societies</Typography>
-        <Grid container spacing={3}>
+      <div className="container" style={{ marginBottom: '50px' }}>
+      <Typography variant="h3" gutterBottom my ={2}style={{ marginBottom: '50px' }}>
+          Societies
+        </Typography>
+        <Grid container spacing={1}>
           {renderClickableItems(societiesData)}
         </Grid>
 
@@ -271,8 +276,10 @@ const SocietiesPage = () => {
       </div>
 
       {/* Clubs Container */}
-      <div className="container" style={{ marginBottom: '100px' }}>
-        <Typography variant="h2">Clubs</Typography>
+      <div className="container" style={{ marginBottom: '50px' }}>
+      <Typography variant="h3" gutterBottom my ={2} style={{ marginBottom: '50px' }}>
+          Clubs
+        </Typography>
         <Grid container spacing={3}>
           {renderClickableItems(clubsData)}
         </Grid>
@@ -292,7 +299,9 @@ const SocietiesPage = () => {
       {/* Interest Groups Container */}
       <Grid container spacing={3} direction="row" justifyContent="center">
         <Grid item xs={12} sm={12}>
-          <Typography variant="h2">Interest Groups</Typography>
+        <Typography variant="h3" gutterBottom my ={2} style={{ marginBottom: '50px' }}>
+          Interest Groups
+        </Typography>
           {renderClickableItems(interestGroupsData)}
         </Grid>
       </Grid>
