@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar';
+import AccommodationsPage from './AccommodationsPage';
 import AdmissionsPage from './AdmissionsPage';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
+        <Route path="/accommodations" element={<AccommodationsPage />} />
         <Route path="/admissions" element={<AdmissionsPage />} />
         {/* ... other routes */}
       </Routes>
