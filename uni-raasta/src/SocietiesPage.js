@@ -251,12 +251,14 @@ const SocietiesPage = () => {
 
   return (
     <div className="page-container">
-    <header>
-            <Typography variant="h2" color='primary' gutterBottom>NUS Societies, Clubs, and Interest Groups</Typography>
-        </header>
+      <header>
+        <Typography variant="h2" color="primary" gutterBottom>
+          NUS Societies, Clubs, and Interest Groups
+        </Typography>
+      </header>
       {/* Societies Container */}
       <div className="container" style={{ marginBottom: '50px' }}>
-      <Typography variant="h3" gutterBottom my ={2}style={{ marginBottom: '50px' }}>
+        <Typography variant="h3" gutterBottom my={2} style={{ marginBottom: '50px' }}>
           Societies
         </Typography>
         <Grid container spacing={1}>
@@ -268,7 +270,7 @@ const SocietiesPage = () => {
           <Button
             variant="outlined"
             onClick={handleFindOutMoreSocieties}
-            sx={{ position: 'absolute', top:'20px', right: '40px', zIndex: 1 }}
+            sx={{ position: 'absolute', top: '20px', right: '40px', zIndex: 1 }}
           >
             Find Out More (Societies)
           </Button>
@@ -277,7 +279,7 @@ const SocietiesPage = () => {
 
       {/* Clubs Container */}
       <div className="container" style={{ marginBottom: '50px' }}>
-      <Typography variant="h3" gutterBottom my ={2} style={{ marginBottom: '50px' }}>
+        <Typography variant="h3" gutterBottom my={2} style={{ marginBottom: '50px' }}>
           Clubs
         </Typography>
         <Grid container spacing={1}>
@@ -299,9 +301,9 @@ const SocietiesPage = () => {
       {/* Interest Groups Container */}
       <Grid container spacing={3} direction="row" justifyContent="center">
         <Grid item xs={12} sm={12}>
-        <Typography variant="h3" gutterBottom my ={2} style={{ marginBottom: '50px' }}>
-          Interest Groups
-        </Typography>
+          <Typography variant="h3" gutterBottom my={2} style={{ marginBottom: '50px' }}>
+            Interest Groups
+          </Typography>
           {renderClickableItems(interestGroupsData)}
         </Grid>
       </Grid>
@@ -343,7 +345,7 @@ const renderClickableItems = (data) => (
                 display: 'flex',
                 alignItems: 'center', // Center the content vertically
                 justifyContent: 'center', // Center the content horizontally
-                margin: 0 
+                margin: 0,
               }}
             />
             {/* Card Content */}
