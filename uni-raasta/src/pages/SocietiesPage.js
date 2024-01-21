@@ -310,10 +310,10 @@ const SocietiesPage = () => {
   );
 };
 
-const renderClickableItems = (data) => (
-    <Grid container spacing={4}>
-        {data.map((item) => (
-            <Grid item key={item.id} xs={12} sm={6} md={3}>
+const renderClickableItems = data => (
+  <Grid container spacing={4}>
+    {data.map(item => (
+      <Grid item key={item.id} xs={12} sm={6} md={3}>
         {/* Use a Material-UI Card for styling */}
         <Card
           sx={{

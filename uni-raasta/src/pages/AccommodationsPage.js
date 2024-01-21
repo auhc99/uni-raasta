@@ -14,7 +14,7 @@ import {
   Paper,
   Link,
 } from '@mui/material';
-import AccommodationsDropDown from './AccommodationsDropDown';
+import AccommodationsDropDown from '../components/accommodations/AccommodationsDropDown';
 
 const accommodationsData = [
   {

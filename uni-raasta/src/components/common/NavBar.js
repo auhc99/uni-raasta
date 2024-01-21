@@ -12,7 +12,7 @@ const NavBar = () => {
     setValue(newValue);
   };
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = event => {
     if (event.key === 'Enter') {
       handleSearch();
     }
@@ -30,14 +30,13 @@ const NavBar = () => {
         navigate(`/${tabName}`);
         return; // Stop searching after the first match
       }
-      navigate('/admissions')
-  }
+      navigate('/admissions');
+    }
   };
 
   return (
     <AppBar position="static">
       <Toolbar>
-        <img alt="NUS Logo" src={'/pictures/nus/nus.png'} style={{ height: '50px', width: '100px' }} />
         <img
           alt="NUS Logo"
           src={'/pictures/nus/nus.png'}
@@ -57,9 +56,15 @@ const NavBar = () => {
           <InputBase
             placeholder="Search..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={e => setSearchQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            style={{ background: 'white', marginRight: '8px', borderRadius: '4px', padding: '4px', width: '300px' }}
+            style={{
+              background: 'white',
+              marginRight: '8px',
+              borderRadius: '4px',
+              padding: '4px',
+              width: '300px',
+            }}
           />
           <IconButton onClick={handleSearch} color="inherit">
             <SearchIcon />

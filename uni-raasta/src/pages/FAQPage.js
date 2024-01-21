@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
-import FAQDropDown from './FAQDropDown';
+import FAQDropDown from '../components/faq/FAQDropDown';
 
 const faqs = {
   Accommodations: [

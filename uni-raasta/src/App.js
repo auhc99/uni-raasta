@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import NavBar from './NavBar';
+import NavBar from './components/common/NavBar';
 import './App.css';
-import AccommodationsPage from './AccommodationsPage';
-import AdmissionsPage from './AdmissionsPage';
-import SocietiesPage from './SocietiesPage';
-import FAQPage from './FAQPage';
-import FeesPage from './FeesPage';
-import PlacementsPage from './PlacementsPage';
+import AccommodationsPage from './pages/AccommodationsPage';
+import AdmissionsPage from './pages/AdmissionsPage';
+import SocietiesPage from './pages/SocietiesPage';
+import FAQPage from './pages/FAQPage';
+import FeesPage from './pages/FeesPage';
+import PlacementsPage from './pages/PlacementsPage';
 
 function App() {
   return (
