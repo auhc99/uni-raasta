@@ -251,13 +251,13 @@ const SocietiesPage = () => {
   return (
     <div className="page-container">
       <header>
-        <Typography variant="h4" color="primary" gutterBottom align = 'left'>
+        <Typography variant="h4" color="primary" gutterBottom align="left">
           NUS Societies, Clubs, and Interest Groups
         </Typography>
       </header>
       {/* Societies Container */}
       <div className="container" style={{ marginBottom: '50px' }}>
-        <Typography variant="h5" gutterBottom align = 'left' my={2} style={{ marginBottom: '50px' }}>
+        <Typography variant="h5" gutterBottom align="left" my={2} style={{ marginBottom: '50px' }}>
           Societies
         </Typography>
         <Grid container spacing={1}>
@@ -278,7 +278,7 @@ const SocietiesPage = () => {
 
       {/* Clubs Container */}
       <div className="container" style={{ marginBottom: '50px' }}>
-        <Typography variant="h5" gutterBottom my={2} align = 'left' style={{ marginBottom: '50px' }}>
+        <Typography variant="h5" gutterBottom my={2} align="left" style={{ marginBottom: '50px' }}>
           Clubs
         </Typography>
         <Grid container spacing={1}>
@@ -300,7 +300,13 @@ const SocietiesPage = () => {
       {/* Interest Groups Container */}
       <Grid container spacing={3} direction="row" justifyContent="center">
         <Grid item xs={12} sm={12}>
-          <Typography variant="h5" gutterBottom my={2} align = 'left' style={{ marginBottom: '50px' }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            my={2}
+            align="left"
+            style={{ marginBottom: '50px' }}
+          >
             Interest Groups
           </Typography>
           {renderClickableItems(interestGroupsData)}
@@ -310,9 +316,9 @@ const SocietiesPage = () => {
   );
 };
 
-const renderClickableItems = (data) => (
+const renderClickableItems = data => (
   <Grid container spacing={4}>
-    {data.map((item) => (
+    {data.map(item => (
       <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
         {/* Use a Material-UI Card for styling */}
         <Card
