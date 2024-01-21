@@ -251,13 +251,13 @@ const SocietiesPage = () => {
   return (
     <div className="page-container">
       <header>
-        <Typography variant="h2" color="primary" gutterBottom>
+        <Typography variant="h4" color="primary" gutterBottom align = 'left'>
           NUS Societies, Clubs, and Interest Groups
         </Typography>
       </header>
       {/* Societies Container */}
       <div className="container" style={{ marginBottom: '50px' }}>
-        <Typography variant="h3" gutterBottom my={2} style={{ marginBottom: '50px' }}>
+        <Typography variant="h5" gutterBottom align = 'left' my={2} style={{ marginBottom: '50px' }}>
           Societies
         </Typography>
         <Grid container spacing={1}>
@@ -278,7 +278,7 @@ const SocietiesPage = () => {
 
       {/* Clubs Container */}
       <div className="container" style={{ marginBottom: '50px' }}>
-        <Typography variant="h3" gutterBottom my={2} style={{ marginBottom: '50px' }}>
+        <Typography variant="h5" gutterBottom my={2} align = 'left' style={{ marginBottom: '50px' }}>
           Clubs
         </Typography>
         <Grid container spacing={1}>
@@ -300,7 +300,7 @@ const SocietiesPage = () => {
       {/* Interest Groups Container */}
       <Grid container spacing={3} direction="row" justifyContent="center">
         <Grid item xs={12} sm={12}>
-          <Typography variant="h3" gutterBottom my={2} style={{ marginBottom: '50px' }}>
+          <Typography variant="h5" gutterBottom my={2} align = 'left' style={{ marginBottom: '50px' }}>
             Interest Groups
           </Typography>
           {renderClickableItems(interestGroupsData)}
@@ -310,15 +310,15 @@ const SocietiesPage = () => {
   );
 };
 
-const renderClickableItems = data => (
+const renderClickableItems = (data) => (
   <Grid container spacing={4}>
-    {data.map(item => (
-      <Grid item key={item.id} xs={12} sm={6} md={3}>
+    {data.map((item) => (
+      <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
         {/* Use a Material-UI Card for styling */}
         <Card
           sx={{
             height: '100%',
-            width: '90%', // Adjust the width as needed
+            width: '80%', // Adjust the width as needed
             display: 'flex',
             flexDirection: 'column',
             '&:hover': {
@@ -336,8 +336,8 @@ const renderClickableItems = data => (
             <CardMedia
               component="div"
               sx={{
-                height: '300px',
-                width: '360px',
+                height: { xs: '150px', sm: '200px', md: '250px' }, // Adjust height for different screen sizes
+                width: '100%',
                 backgroundImage: `url(${item.imageURL})`,
                 backgroundSize: 'contain',
                 backgroundPosition: 'center center',
