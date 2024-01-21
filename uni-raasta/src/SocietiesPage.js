@@ -10,7 +10,6 @@ import {
   Typography,
   Button,
 } from '@mui/material';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const SocietiesPage = () => {
   const societiesData = [
