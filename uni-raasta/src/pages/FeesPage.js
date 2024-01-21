@@ -93,7 +93,7 @@ const tableBodyStyle = {
 const FeesPage = () => {
   return (
     <Box my={2}>
-      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
+      <Typography variant="h4" color="primary" gutterBottom>
         Tuition Fees
       </Typography>
 
@@ -173,7 +173,7 @@ const FeesPage = () => {
         </Table>
       </TableContainer>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 3 }}>
         Miscellaneous Student Fees
       </Typography>
 
@@ -277,7 +277,7 @@ const FeesPage = () => {
         </Table>
       </TableContainer>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
+      <Typography variant="h4" color="primary" sx={{ mt: 3 }}>
         Tuition Fee beyond Normal Candidature
       </Typography>
 
@@ -356,7 +356,7 @@ const FeesPage = () => {
         non-subsidised semestral fees pro-rated based on the number of units read.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
+      <Typography variant="h4" color="primary" gutterBottom>
         Fee Payment Procedures
       </Typography>
 
@@ -374,7 +374,7 @@ const FeesPage = () => {
         Student Bill online at least 2 weeks before the scheduled deadline for fee payment.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
+      <Typography variant="h4" color="primary" gutterBottom>
         Late and Partial Payment Penalties
       </Typography>
 
@@ -394,7 +394,7 @@ const FeesPage = () => {
         students with overdue fees may have their candidature of study terminated.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
+      <Typography variant="h4" color="primary" gutterBottom>
         Refund Policy
       </Typography>
 
@@ -405,7 +405,7 @@ const FeesPage = () => {
         be considered.
       </Typography>
 
-      <Typography variant="h4" color="primary" sx={{ mt: 5 }}>
+      <Typography variant="h4" color="primary" gutterBottom>
         Scholarship and Financial Aid
       </Typography>
 
