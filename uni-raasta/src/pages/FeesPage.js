@@ -84,7 +84,7 @@ const tableHeaderStyle = {
 };
 
 const tableBodyStyle = {
-  backgroundColor: 'rgba(255,238,170, 0.6)', // Translucent orange background
+  backgroundColor: 'rgba(255,238,170, 0.6)', // Translucent yellow background
   borderRadius: '10px', // Rounded corners
   padding: '15px', // Padding inside the table container
   margin: '20px 0', // Margin around the table container
